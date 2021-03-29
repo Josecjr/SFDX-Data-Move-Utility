@@ -54,6 +54,7 @@ export enum RESOURCES {
     cantLoad = "cantLoad",
     global = "global",
     canNotLoadModule = "canNotLoadModule",
+    missingOrInvalidQuery = "missingOrInvalidQuery",
 
     defaultPromptOptions = "defaultPromptOptions",
     defaultPromptNopromptOption = "defaultPromptNopromptOption",

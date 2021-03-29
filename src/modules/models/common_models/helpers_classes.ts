@@ -16,6 +16,7 @@ import "es6-shim";
 import { Type } from "class-transformer";
 import { AddonManifestDefinition } from "../script_models/addonManifestDefinition";
 import { DATA_MEDIA_TYPE, OPERATION } from "../../../addons/package/base/enumerations";
+import { IGeneralDataResponse } from "../../../addons/package/base";
 
 
 
@@ -509,6 +510,22 @@ export class AddonManifest {
 
     @Type(() => AddonManifestDefinition)
     addons: AddonManifestDefinition[] = new Array<AddonManifestDefinition>();
+}
+
+export class GeneralDataResponse implements IGeneralDataResponse {
+
+    constructor(init?: Partial<GeneralDataResponse>) {
+        if (init) {
+            Object.assign(this, init);
+        }
+    }
+
+    errorMessage: string;
+    data: Array<any> = new Array<any>();
+
+    get isError() {
+        return !!this.errorMessage;
+    }
 }
 
 

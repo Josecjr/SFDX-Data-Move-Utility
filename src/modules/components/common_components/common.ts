@@ -1393,16 +1393,16 @@ export class Common {
      * Execute several async functions in parallel
      *
      * @static
-     * @param {Array<(...args: any[]) => Promise<any>>} fns The functions to execute
+     * @param {Array<() => Promise<any>>} fns The functions to execute
      * @param {*} [thisArg] This arg to apply to all functions
      * @param {number} [maxParallelTasks=5] The maximum parallelizm
      * @returns {Promise<any[]>} Array of results of all functions
      * @memberof Common
      */
-    public static async parallelExecAsync(fns: Array<(...args: any[]) => Promise<any>>, thisArg?: any, maxParallelTasks: number = 5): Promise<any[]> {
+    public static async parallelExecAsync(fns: Array<() => Promise<any>>, thisArg?: any, maxParallelTasks?: number): Promise<any[]> {
         thisArg = thisArg || this;
-        const queue = fns.map(fn => () => fn.bind(thisArg, ...fn.arguments));
-        const result: any[] = await Common.parallelTasksAsync(queue, maxParallelTasks || CONSTANTS.MAX_PARALLEL_DOWNLOAD_THREADS);
+        const queue = fns.map(fn => () => (fn.bind(thisArg))());
+        const result: any[] = await Common.parallelTasksAsync(queue, maxParallelTasks || CONSTANTS.MAX_PARALLEL_THREADS);
         return result;
     }
 
@@ -1410,15 +1410,15 @@ export class Common {
      * Execute secveral async functions in serial mode 
      *
      * @static
-     * @param {Array<(...args: any[]) => Promise<any>>} fns The functions to execute
+     * @param {Array<() => Promise<any>>} fns The functions to execute
      * @param {*} [thisArg] This arg to apply to all functions
      * @returns {Promise<any[]>} Array of results of all functions 
      * @memberof Common
      */
-    public static async serialExecAsync(fns: Array<(...args: any[]) => Promise<any>>, thisArg?: any): Promise<any[]> {
+    public static async serialExecAsync(fns: Array<() => Promise<any>>, thisArg?: any): Promise<any[]> {
         thisArg = thisArg || this;
         let result = [];
-        const queue = fns.map(fn => async () => fn.bind(thisArg, ...fn.arguments));
+        const queue = fns.map(fn => async () => await (fn.bind(thisArg))());
         for (let index = 0; index < queue.length; index++) {
             const fn = queue[index];
             result = result.concat(await fn());
@@ -1541,6 +1541,43 @@ export class Common {
             return subst;
         });
         return output;
+    }
+
+    /**
+     * Converts raw records (which includes nested objects & properties) returned from the SF Api to the noramlized array.
+     * 
+     * @static
+     * @param {Array<any>} rawRecords The raw records returned from the API
+     * @param {string} query The original SOQL used to query for the records
+     * @returns {Array<any>}
+     * @memberof Common
+     */
+    public static parseQueryRecords(rawRecords: Array<any>, query: string): Array<any> {
+        const getNestedObject = (nestedObj: any, pathArr: any) => {
+            return pathArr.reduce((obj: any, key: any) => obj && obj[key] !== 'undefined' ? obj[key] : undefined, nestedObj);
+        }
+        let fieldMapping = {};
+        const soqlQuery = parseQuery(query);
+        soqlQuery.fields.forEach(element => {
+            if (element.type == "FieldFunctionExpression") {
+                fieldMapping[element.alias] = [element.alias];
+            } else if (element.type == "Field")
+                fieldMapping[element.field] = [element.field];
+            else if (element.type == "FieldRelationship") {
+                var v = element.relationships.concat(element.field);
+                fieldMapping[element.rawValue] = v;
+            }
+        });
+        var parsedRecords = rawRecords.map(function (record) {
+            var o = {};
+            for (var prop in fieldMapping) {
+                if (fieldMapping.hasOwnProperty(prop)) {
+                    o[prop] = getNestedObject(record, fieldMapping[prop]);
+                }
+            }
+            return o;
+        });
+        return parsedRecords;
     }
 
 

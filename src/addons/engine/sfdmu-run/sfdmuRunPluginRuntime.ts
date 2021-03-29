@@ -27,6 +27,8 @@ import * as path from 'path';
 import * as fs from 'fs';
 import SfdmuContentVersion from "./sfdmuContentVersion";
 import { CORE_MESSAGES } from "../messages/core";
+import IMetadataDefinition from "../../package/base/IMetadataDefinition";
+
 
 
 
@@ -52,6 +54,7 @@ export default class SfdmuRunPluginRuntime extends PluginRuntimeBase implements 
         this.#script = script;
         this.#logger = script.logger;
     }
+
 
 
     /* -------- System Functions (for direct access) ----------- */
@@ -501,6 +504,33 @@ export default class SfdmuRunPluginRuntime extends PluginRuntimeBase implements 
             removeParentFolder = false;
         let tmp = this.getOrCreateTempPath(module);
         Common.deleteFolderRecursive(tmp, false, removeParentFolder);
+    }
+
+    /**
+     * Lists metadata of given type
+     *
+     * @param {string} type The type of metadata
+     * @param {Array<string>} [objectList] The list of objects to retrieve metadata for them
+     * @returns {IMetadataDefinition[]} The array of retrieved metadata
+     * @memberof ISfdmuRunPluginRuntime
+     */
+    async listMetadata(type: string, objectList?: string[]): Promise<IMetadataDefinition[]> {
+   
+        let sfdx = new Sfdx(this.#script.targetOrg);
+        
+        let data = await sfdx.listMetadata(type);
+        await sfdx.readMetadata(data);
+
+        //let data2 = await mtp.toolingApi_queryMetadata('Select Id,ActiveVersion.VersionNumber,LatestVersion.VersionNumber,DeveloperName From FlowDefinition ORDER BY DeveloperName');
+        //let data2 = await sfdx.toolingApi_queryMetadata('Select Id,ActiveVersion.VersionNumber,LatestVersion.VersionNumber,DeveloperName From FlowDefinition ORDER BY DeveloperName');
+        // data.data.forEach(element => {
+        //     element.rawMetadata = {
+        //         fullName : element.rawMetadata.fullName,
+        //         status: 'Draft'
+        //     };
+        // });
+        await sfdx.activateDeactivateProcesses(data, false);
+        return [];
     }
 
 }

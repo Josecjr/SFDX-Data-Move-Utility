@@ -19,6 +19,7 @@ import { Common } from './common';
 import { IOrgConnectionData, IFieldMapping, IFieldMappingResult, IIdentityInfo } from '../../models/common_models/helper_interfaces';
 import { Logger, RESOURCES } from './logger';
 import IBlobField from '../../../addons/package/base/IBlobField';
+import { MetadataDefinition, MetadataDefinitionItem } from '../../models/api_models';
 
 var jsforce = require("jsforce");
 
@@ -153,7 +154,7 @@ export class Sfdx implements IFieldMapping {
             let soqlFormat = ___formatSoql(soql);
             soql = soqlFormat[0];
             let records = (await self.queryAsync(soql, useBulkQueryApi)).records;
-            records = ___parseRecords(records, soql);
+            records = Common.parseQueryRecords(records, soql);
             records = ___formatRecords(records, soqlFormat);
             records = await ___retrieveBlobFieldData(records, soqlFormat[3]);
             return records;
@@ -214,35 +215,35 @@ export class Sfdx implements IFieldMapping {
             return [newQuery, outputMap, originalFieldNamesToKeep, newParsedQuery.sObject];
         }
 
-        function ___parseRecords(rawRecords: Array<any>, query: string): Array<any> {
-            const getNestedObject = (nestedObj: any, pathArr: any) => {
-                return pathArr.reduce((obj: any, key: any) => obj && obj[key] !== 'undefined' ? obj[key] : undefined, nestedObj);
-            }
-            let fieldMapping = {};
-            const soqlQuery = parseQuery(query);
-            soqlQuery.fields.forEach(element => {
-                if (element.type == "FieldFunctionExpression") {
-                    fieldMapping[element.alias] = [element.alias];
-                } else if (element.type == "Field")
-                    fieldMapping[element.field] = [element.field];
-                else if (element.type == "FieldRelationship") {
-                    var v = element.relationships.concat(element.field);
-                    fieldMapping[element.rawValue] = v;
-                }
-            });
-            var parsedRecords = rawRecords.map(function (record) {
-                var o = {};
-                for (var prop in fieldMapping) {
-                    if (fieldMapping.hasOwnProperty(prop)) {
-                        o[prop] = getNestedObject(record, fieldMapping[prop]);
-                    }
-                }
-                return o;
-            });
-            return parsedRecords;
-        }
+        // function ___parseRecords(rawRecords: Array<any>, query: string): Array<any> {
+        //     const getNestedObject = (nestedObj: any, pathArr: any) => {
+        //         return pathArr.reduce((obj: any, key: any) => obj && obj[key] !== 'undefined' ? obj[key] : undefined, nestedObj);
+        //     }
+        //     let fieldMapping = {};
+        //     const soqlQuery = parseQuery(query);
+        //     soqlQuery.fields.forEach(element => {
+        //         if (element.type == "FieldFunctionExpression") {
+        //             fieldMapping[element.alias] = [element.alias];
+        //         } else if (element.type == "Field")
+        //             fieldMapping[element.field] = [element.field];
+        //         else if (element.type == "FieldRelationship") {
+        //             var v = element.relationships.concat(element.field);
+        //             fieldMapping[element.rawValue] = v;
+        //         }
+        //     });
+        //     var parsedRecords = rawRecords.map(function (record) {
+        //         var o = {};
+        //         for (var prop in fieldMapping) {
+        //             if (fieldMapping.hasOwnProperty(prop)) {
+        //                 o[prop] = getNestedObject(record, fieldMapping[prop]);
+        //             }
+        //         }
+        //         return o;
+        //     });
+        //     return parsedRecords;
+        // }
 
-        function ___formatRecords(records: Array<any>, soqlFormat: [string, Map<string, Array<string>>, Array<string>, string]): Array<any> {          
+        function ___formatRecords(records: Array<any>, soqlFormat: [string, Map<string, Array<string>>, Array<string>, string]): Array<any> {
             // Process complex keys}
             if (soqlFormat[1].size == 0) {
                 return records;
@@ -462,7 +463,7 @@ export class Sfdx implements IFieldMapping {
 
         let self = this;
         const queue = recordIds.map(recordId => () => ___getBlobData(recordId, blobField));
-        const downloadedBlobs: Array<[string, string]> = await Common.parallelTasksAsync(queue, CONSTANTS.MAX_PARALLEL_DOWNLOAD_THREADS);
+        const downloadedBlobs: Array<[string, string]> = await Common.parallelTasksAsync(queue, CONSTANTS.MAX_PARALLEL_THREADS);
         return new Map<string, string>(downloadedBlobs);
 
         // ------------------ internal functions ------------------------- //        
@@ -479,6 +480,242 @@ export class Sfdx implements IFieldMapping {
                 });
             });
         }
+    }
+
+
+    async listMetadata(type: string, excludeUnmanaged: boolean = true): Promise<MetadataDefinition> {
+        return new Promise<MetadataDefinition>(resolve => {
+            let conn = this.org.getConnection();
+            let types = [{ type, folder: null }];
+            conn.metadata.list(types, this.org.connectionData.apiVersion, (err: any, rawMetadatas: any[]) => {
+                if (err) {
+                    resolve(new MetadataDefinition({
+                        errorMessage: err,
+                        type
+                    }));
+                    return;
+                }
+                rawMetadatas = [].concat(rawMetadatas || []);
+                let response = new MetadataDefinition({
+                    data: rawMetadatas
+                        .filter(rawMetadata => excludeUnmanaged ? rawMetadata.manageableState == 'unmanaged' : true)
+                        .map(rawMetadata => new MetadataDefinitionItem(rawMetadata)),
+                    type
+                });
+                resolve(response);
+            });
+        });
+
+    }
+
+    async readMetadata(metadataDefinition: MetadataDefinition): Promise<MetadataDefinition> {
+
+        let _self = this;
+
+        // -------------- Helper Functions ---------------- //
+        const ___readMetadata = async (metadataItems: MetadataDefinitionItem[]): Promise<void> => {
+            return new Promise<void>(resolve => {
+                let conn = _self.org.getConnection();
+                let metaFullNameToMetaMap = Common.arrayToMapByProperty(metadataItems, 'fullName');
+                conn.metadata.read(metadataDefinition.type, [...metaFullNameToMetaMap.keys()], function (err: any, rawMetadatatas: any[]) {
+                    if (err) {
+                        metadataDefinition.errorMessage = [].concat(metadataDefinition.errorMessage, err)
+                            .filter(errorMessage => !!errorMessage)
+                            .join(';');
+                        resolve();
+                        return;
+                    }
+                    rawMetadatatas = [].concat(rawMetadatatas || []);
+                    for (let i = 0; i < rawMetadatatas.length; i++) {
+                        const rawMetadata = rawMetadatatas[i];
+                        let metadataItem: MetadataDefinitionItem = <any>metaFullNameToMetaMap.get(rawMetadata.fullName);
+                        if (metadataItem) {
+                            metadataItem.readMetadataResult = rawMetadata;
+                        }
+                    }
+                    resolve();
+                });
+            });
+        };
+        // ---------------------------------------------
+
+
+        // Check for parameteras
+        if (!metadataDefinition || metadataDefinition.data.length == 0) {
+            return metadataDefinition;
+        }
+
+        // Detect how many metadata items it can read at once
+        let itemsPerApiCall = CONSTANTS.MAX_READ_METADATA_DEFAULT_CHUNK_SIZE;
+        let ids = new Map<string, any>();
+        let toolingApiQueries = [];
+
+        switch (metadataDefinition.type) {
+            // Flow allows retrieving only one item per metadata read call...
+            case 'Flow':
+                itemsPerApiCall = 1;
+                ids = Common.arrayToMapByProperty(metadataDefinition.data, 'fullName');
+                toolingApiQueries = Common.createFieldInQueries(
+                    ['Id', 'ActiveVersion.VersionNumber', 'DeveloperName'],
+                    'DeveloperName',
+                    'FlowDefinition',
+                    [...ids.keys()]);
+                break;
+
+            // Setup others...
+            // ....
+        }
+
+        // Split metadata items into chunks + create functions
+        let metadataChunkedItems = Common.chunkArray(metadataDefinition.data, itemsPerApiCall);
+        let apiCalls = metadataChunkedItems.map(item => () => ___readMetadata(item));
+
+        // Read metadata
+        await Common.parallelTasksAsync(apiCalls, CONSTANTS.MAX_METADATA_PROCESS_PARALLEL_THREADS);
+
+        // Get additional data if need
+        if (toolingApiQueries.length) {
+            for (let index = 0; index < toolingApiQueries.length; index++) {
+                const query = toolingApiQueries[index];
+                let mtd = await this.queryMetadata(query);
+                switch (metadataDefinition.type) {
+                    case 'Flow':
+                        mtd.data.forEach(item => {
+                            let metadata = <MetadataDefinitionItem>ids.get(item['DeveloperName']);
+                            metadata.data = mtd.data
+                        });
+                        break;
+                    // Setup others...
+                    // ....
+                    default:
+                        break;
+                }
+
+            }
+        }
+
+        // Return
+        return metadataDefinition;
+    }
+
+    async updateMetadata(metadataDefinition: MetadataDefinition): Promise<MetadataDefinition> {
+
+        let _self = this;
+
+        // -------------- Helper Functions ---------------- //
+        const ___updateMetadata = async (metadataItem: MetadataDefinitionItem): Promise<void> => {
+            return new Promise<void>(resolve => {
+                if (!metadataItem.readMetadataResult) {
+                    metadataItem.updateMetadataResult = {};
+                    resolve();
+                    return;
+                }
+                let conn = _self.org.getConnection();
+                conn.metadata.update(metadataDefinition.type, [metadataItem.readMetadataResult], function (err: any, rawMetadatatas: any[]) {
+                    if (err) {
+                        metadataDefinition.errorMessage = [].concat(metadataDefinition.errorMessage, err)
+                            .filter(errorMessage => !!errorMessage)
+                            .join(';');
+                        metadataItem.updateMetadataResult = {};
+                        resolve();
+                        return;
+                    }
+                    rawMetadatatas = [].concat(rawMetadatatas || []);
+                    rawMetadatatas.forEach(rawMetadata => {
+                        if (!rawMetadata.success) {
+                            metadataItem.errorMessage = [].concat(metadataItem.errorMessage,
+                                [].concat(rawMetadata.errors).map(error => error.message))
+                                .filter(errorMessage => !!errorMessage)
+                                .join(';');
+                            metadataItem.updateMetadataResult = rawMetadata;
+                        }
+                    });
+                });
+                resolve();
+            });
+        };
+        // ------------------------------------------------ //
+
+        // Create update tasks        
+        let apiCalls = metadataDefinition.data.map(item => () => ___updateMetadata(item));
+
+        // Update metadata
+        await Common.parallelTasksAsync(apiCalls, CONSTANTS.MAX_METADATA_PROCESS_PARALLEL_THREADS);
+
+        return metadataDefinition;
+    }
+
+
+    async activateDeactivateProcesses(metadataDefinition: MetadataDefinition, activeStatus: boolean | number): Promise<MetadataDefinition> {
+
+        // Setup metadata to update
+        let type = metadataDefinition.type;
+        let mtd = new MetadataDefinition({
+            data: metadataDefinition.data.map(metadataItem => {
+                let mti = new MetadataDefinitionItem();
+                switch (type) {
+                    case 'Flow':
+                        type = 'FlowDefinition';
+                        mti = new MetadataDefinitionItem({
+                            readMetadataResult: {
+                                fullName: metadataItem.readMetadataResult.fullName,
+                                activeVersionNumber: !activeStatus ? 0 : activeStatus
+                            }
+                        });
+                        break;
+                    // Setup others...
+                    // ....
+                    default:
+                        break;
+                }
+                return mti;
+            })
+        });
+        mtd.type = type;
+
+        // Update metadata
+        await this.updateMetadata(mtd);
+
+        return mtd;
+    }
+
+
+
+    async queryMetadata(queryString: string): Promise<MetadataDefinition> {
+        // ManageableState = 'unmanaged'
+        return new Promise<MetadataDefinition>(resolve => {
+            if (!queryString) {
+                resolve(new MetadataDefinition({
+                    errorMessage: this.logger.getResourceString(RESOURCES.missingOrInvalidQuery, queryString),
+                    type: ''
+                }));
+                return;
+            }
+            let conn = this.org.getConnection();
+            let type = queryString.match(/from\s+([\w\d_]+)/i)[1];
+            if (!queryString) {
+                resolve(new MetadataDefinition({
+                    errorMessage: this.logger.getResourceString(RESOURCES.missingOrInvalidQuery, queryString),
+                    type: ''
+                }));
+                return;
+            }
+            conn.tooling.query(queryString, (err: any, data: any) => {
+                if (err) {
+                    resolve(new MetadataDefinition({
+                        errorMessage: err,
+                        type
+                    }));
+                    return;
+                }
+
+                data = Common.parseQueryRecords(data.records, queryString);
+                resolve(new MetadataDefinition({
+                    data,
+                    type
+                }));
+            });
+        });
     }
 
 

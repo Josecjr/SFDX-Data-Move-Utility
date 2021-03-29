@@ -25,6 +25,7 @@
     "cantLoad": "%s is not found or could not be loaded.",
     "global": "Global",
     "canNotLoadModule": "Can not load module %s",
+    "missingOrInvalidQuery": "Missing or invalid query",
 
     "defaultPromptOptions": "y/n",
     "defaultPromptNopromptOption": "y",
