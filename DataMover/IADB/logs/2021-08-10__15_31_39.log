@@ -1,0 +1,187 @@
+
+[15:31:39.303] {"Running version":"4.4.3"}
+
+[15:31:39.306] [[Core Manifest]] Loading addon manifest ...
+[15:31:39.308] [[User Manifest]] Loading addon manifest ...
+[15:31:39.654] Connecting to joseda@iadb.org.codemerge using SFDX CLI ...
+[15:31:42.401] Successfully connected to joseda@iadb.org.codemerge.
+[15:31:42.875] Connecting to joseda@iadb.org.ccon using SFDX CLI ...
+[15:31:46.717] Successfully connected to joseda@iadb.org.ccon.
+[15:31:47.778] {"SOURCE":"joseda@iadb.org.codemerge.","TARGET":"joseda@iadb.org.ccon.","Package script":"C:\\Users\\joseda\\OneDrive - Inter-American Development Bank Group\\Desktop\\DataMover\\IADB\\export.json."}
+
+[15:31:47.780] GETTING AND ANALYSING OBJECTS METADATA ...
+[15:31:47.781] Processing the sObject RecordType ...
+[15:31:47.782] Getting metadata for RecordType (SOURCE)
+[15:31:49.458] Getting metadata for RecordType (TARGET)
+[15:31:49.986] Processing the sObject Contact ...
+[15:31:49.987] Getting metadata for Contact (SOURCE)
+[15:31:51.136] Getting metadata for Contact (TARGET)
+[15:31:52.684] Processing the sObject Account ...
+[15:31:52.685] Getting metadata for Account (SOURCE)
+[15:31:54.62] Getting metadata for Account (TARGET)
+[15:31:56.218] Processing the sObject AccountContactRelation ...
+[15:31:56.218] Getting metadata for AccountContactRelation (SOURCE)
+[15:31:56.439] Getting metadata for AccountContactRelation (TARGET)
+[15:31:56.832] Processing the sObject Operation__c ...
+[15:31:56.833] Getting metadata for Operation__c (SOURCE)
+[15:31:57.711] Getting metadata for Operation__c (TARGET)
+[15:31:58.485] Processing the sObject Opportunity ...
+[15:31:58.486] Getting metadata for Opportunity (SOURCE)
+[15:31:59.612] Getting metadata for Opportunity (TARGET)
+[15:32:00.901][WARN] Field Opportunity.AI_BID_SharedWith__c is missing in the Target.
+[15:32:00.902][WARN] Field Opportunity.AI_External_Collaboration_ORP_Cofinance__c is missing in the Target.
+[15:32:00.902][WARN] Field Opportunity.AI_ProductType__c is missing in the Target.
+[15:32:00.903][WARN] Field Opportunity.AI_Summary__c is missing in the Target.
+[15:32:00.904][WARN] Field Opportunity.AI_ChangeStage_by_Path__c is missing in the Target.
+[15:32:00.905][WARN] Field Opportunity.AI_Required_Informration_CloseOpp__c is missing in the Target.
+[15:32:00.905] Processing the sObject PSR_Sub_Operation__c ...
+[15:32:00.906] Getting metadata for PSR_Sub_Operation__c (SOURCE)
+[15:32:04.283] Getting metadata for PSR_Sub_Operation__c (TARGET)
+[15:32:05.232] Processing the sObject AI_Related_Account__c ...
+[15:32:05.232] Getting metadata for AI_Related_Account__c (SOURCE)
+[15:32:05.664] Getting metadata for AI_Related_Account__c (TARGET)
+[15:32:06.114] Processing the sObject Operations_Relationship__c ...
+[15:32:06.115] Getting metadata for Operations_Relationship__c (SOURCE)
+[15:32:06.580] Getting metadata for Operations_Relationship__c (TARGET)
+[15:32:07.21][WARN] Field Operations_Relationship__c.Account_External_Id__c is missing in the Target.
+[15:32:07.22] Processing the sObject PSR_Milestone__c ...
+[15:32:07.23] Getting metadata for PSR_Milestone__c (SOURCE)
+[15:32:07.618] Getting metadata for PSR_Milestone__c (TARGET)
+[15:32:08.212] Processing the sObject PSR_Project_Status_Report__c ...
+[15:32:08.213] Getting metadata for PSR_Project_Status_Report__c (SOURCE)
+[15:32:09.230] Getting metadata for PSR_Project_Status_Report__c (TARGET)
+[15:32:10.77] Processing the sObject PSR_Project_Status_Report__c ...
+[15:32:10.80] Processing the sObject PSR_Milestone__c ...
+[15:32:10.80] Processing the sObject Operations_Relationship__c ...
+[15:32:10.81] Processing the sObject AI_Related_Account__c ...
+[15:32:10.82] Processing the sObject PSR_Sub_Operation__c ...
+[15:32:10.87] Getting metadata for Fund__c (SOURCE)
+[15:32:10.519] Getting metadata for Fund__c (TARGET)
+[15:32:11.491] The parent sobject Fund__c for the lookup field PSR_Sub_Operation__c.Fund__c has been included into the process. The externalId is set to 'Name'.
+[15:32:11.493] Getting metadata for PSR_Category__c (SOURCE)
+[15:32:12.18] Getting metadata for PSR_Category__c (TARGET)
+[15:32:12.528] The parent sobject PSR_Category__c for the lookup field PSR_Sub_Operation__c.PSR_Category86__c has been included into the process. The externalId is set to 'Name'.
+[15:32:12.530] Getting metadata for PSR_Milestone_Execution__c (SOURCE)
+[15:32:13.157] Getting metadata for PSR_Milestone_Execution__c (TARGET)
+[15:32:13.812] The parent sobject PSR_Milestone_Execution__c for the lookup field PSR_Sub_Operation__c.PSR_MilestonePriorCondition__c has been included into the process. The externalId is set to 'Name'.
+[15:32:13.815] Getting metadata for PSR_Transaction__c (SOURCE)
+[15:32:14.316] Getting metadata for PSR_Transaction__c (TARGET)
+[15:32:14.803] The parent sobject PSR_Transaction__c for the lookup field PSR_Sub_Operation__c.PSR_LastDisbursementTransaction__c has been included into the process. The externalId is set to 'Name'.
+[15:32:14.806] Getting metadata for PSR_Clause__c (SOURCE)
+[15:32:15.109] Getting metadata for PSR_Clause__c (TARGET)
+[15:32:15.697] The parent sobject PSR_Clause__c for the lookup field PSR_Sub_Operation__c.PSR_OverdueClause__c has been included into the process. The externalId is set to 'Name'.
+[15:32:15.700] Processing the sObject Opportunity ...
+[15:32:15.703] Getting metadata for Campaign (SOURCE)
+[15:32:16.330] Getting metadata for Campaign (TARGET)
+[15:32:17.54] The parent sobject Campaign for the lookup field Opportunity.CampaignId has been included into the process. The externalId is set to 'Name'.
+[15:32:17.57] Getting metadata for Pricebook2 (SOURCE)
+[15:32:17.366] Getting metadata for Pricebook2 (TARGET)
+[15:32:17.804] The parent sobject Pricebook2 for the lookup field Opportunity.Pricebook2Id has been included into the process. The externalId is set to 'Name'.
+[15:32:17.806] Getting metadata for Quote (SOURCE)
+[15:32:18.317] Getting metadata for Quote (TARGET)
+[15:32:19.911] The parent sobject Quote for the lookup field Opportunity.SyncedQuoteId has been included into the process. The externalId is set to 'Name'.
+[15:32:19.913] Getting metadata for Contract (SOURCE)
+[15:32:20.296] Getting metadata for Contract (TARGET)
+[15:32:21.334] The parent sobject Contract for the lookup field Opportunity.ContractId has been included into the process. The externalId is set to 'ContractNumber'.
+[15:32:21.341] Getting metadata for Pitch__c (SOURCE)
+[15:32:22.823] Getting metadata for Pitch__c (TARGET)
+[15:32:23.180] The parent sobject Pitch__c for the lookup field Opportunity.Eligible_Pitch__c has been included into the process. The externalId is set to 'Name'.
+[15:32:23.184] Processing the sObject Operation__c ...
+[15:32:23.186] Processing the sObject AccountContactRelation ...
+[15:32:23.187] Processing the sObject Account ...
+[15:32:23.197] Getting metadata for Individual (SOURCE)
+[15:32:23.604] Getting metadata for Individual (TARGET)
+[15:32:24.88] The parent sobject Individual for the lookup field Account.PersonIndividualId has been included into the process. The externalId is set to 'Name'.
+[15:32:24.115] Processing the sObject Contact ...
+[15:32:24.119] Processing the sObject RecordType ...
+
+[15:32:24.124] PREPARING DATA MIGRATION JOB ...
+[15:32:24.125] Building migration strategy ...
+[15:32:24.144] {"Order of objects to retrieve data":"RecordType; Account; AccountContactRelation; Contact; PSR_Sub_Operation__c; PSR_Milestone__c; Individual; Pitch__c; Contract; Quote; Pricebook2; Campaign; PSR_Clause__c; PSR_Transaction__c; PSR_Milestone_Execution__c; PSR_Category__c; Fund__c; Opportunity; Operation__c; PSR_Project_Status_Report__c; AI_Related_Account__c; Operations_Relationship__c"}
+[15:32:24.145] {"Order of objects to delete data":"PSR_Milestone__c; Operations_Relationship__c; AI_Related_Account__c; PSR_Sub_Operation__c; PSR_Project_Status_Report__c; Operation__c; Opportunity; AccountContactRelation; Contact; Account; Fund__c; PSR_Category__c; PSR_Milestone_Execution__c; PSR_Transaction__c; PSR_Clause__c; Campaign; Pricebook2; Quote; Contract; Pitch__c; Individual; RecordType"}
+[15:32:24.146] {"Order of objects to update data":"RecordType; Individual; Pitch__c; Contract; Quote; Pricebook2; Campaign; PSR_Clause__c; PSR_Transaction__c; PSR_Milestone_Execution__c; PSR_Category__c; Fund__c; Account; Contact; AccountContactRelation; Opportunity; Operation__c; PSR_Project_Status_Report__c; PSR_Sub_Operation__c; AI_Related_Account__c; Operations_Relationship__c; PSR_Milestone__c"}
+[15:32:24.157] Reading the values mapping CSV file (ValueMapping.csv)
+[15:32:24.157] Preparing has been finished.
+
+[15:32:24.159] GETTING THE TOTAL AMOUNT OF RECORDS LIMITED BY THE OBJECT'S SOQL QUERY ...
+[15:32:24.242] {RecordType} Total amount of the SOURCE records: 65
+[15:32:24.470] {RecordType} Total amount of the TARGET records: 65
+[15:32:24.563] {Individual} Total amount of the SOURCE records: 19
+[15:32:24.802] {Individual} Total amount of the TARGET records: 0
+[15:32:24.949] {Pitch__c} Total amount of the SOURCE records: 7
+[15:32:25.219] {Pitch__c} Total amount of the TARGET records: 0
+[15:32:25.346] {Contract} Total amount of the SOURCE records: 0
+[15:32:25.591] {Contract} Total amount of the TARGET records: 0
+[15:32:25.651] {Quote} Total amount of the SOURCE records: 0
+[15:32:25.914] {Quote} Total amount of the TARGET records: 0
+[15:32:26.52] {Pricebook2} Total amount of the SOURCE records: 1
+[15:32:26.326] {Pricebook2} Total amount of the TARGET records: 1
+[15:32:26.476] {Campaign} Total amount of the SOURCE records: 607
+[15:32:26.710] {Campaign} Total amount of the TARGET records: 0
+[15:32:27.46] {PSR_Clause__c} Total amount of the SOURCE records: 2979
+[15:32:27.275] {PSR_Clause__c} Total amount of the TARGET records: 0
+[15:32:31.421] {PSR_Transaction__c} Total amount of the SOURCE records: 0
+[15:32:31.645] {PSR_Transaction__c} Total amount of the TARGET records: 0
+[15:32:32.672] {PSR_Milestone_Execution__c} Total amount of the SOURCE records: 13554
+[15:32:32.902] {PSR_Milestone_Execution__c} Total amount of the TARGET records: 0
+[15:32:36.173] {PSR_Category__c} Total amount of the SOURCE records: 69965
+[15:32:36.399] {PSR_Category__c} Total amount of the TARGET records: 0
+[15:32:36.550] {Fund__c} Total amount of the SOURCE records: 189
+[15:32:36.776] {Fund__c} Total amount of the TARGET records: 0
+[15:32:37.170] {Account} Total amount of the SOURCE records: 9875
+[15:32:37.552] {Account} Total amount of the TARGET records: 8807
+[15:32:37.807] {Contact} Total amount of the SOURCE records: 1459
+[15:32:38.111] {Contact} Total amount of the TARGET records: 1300
+[15:32:38.482] {AccountContactRelation} Total amount of the SOURCE records: 1459
+[15:32:38.895] {AccountContactRelation} Total amount of the TARGET records: 1277
+[15:32:39.75] {Opportunity} Total amount of the SOURCE records: 831
+[15:32:39.387] {Opportunity} Total amount of the TARGET records: 10
+[15:32:40.825] {Operation__c} Total amount of the SOURCE records: 30570
+[15:32:41.797] {Operation__c} Total amount of the TARGET records: 15810
+[15:32:42.121] {PSR_Project_Status_Report__c} Total amount of the SOURCE records: 5719
+[15:32:42.373] {PSR_Project_Status_Report__c} Total amount of the TARGET records: 0
+[15:32:43.82] {PSR_Sub_Operation__c} Total amount of the SOURCE records: 13889
+[15:32:43.590] {PSR_Sub_Operation__c} Total amount of the TARGET records: 13489
+[15:32:43.766] {AI_Related_Account__c} Total amount of the SOURCE records: 42
+[15:32:43.983] {AI_Related_Account__c} Total amount of the TARGET records: 45
+[15:32:50.354] {Operations_Relationship__c} Total amount of the SOURCE records: 12211
+[15:32:50.814] {Operations_Relationship__c} Total amount of the TARGET records: 12211
+[15:32:51.73] {PSR_Milestone__c} Total amount of the SOURCE records: 2712
+[15:32:51.312] {PSR_Milestone__c} Total amount of the TARGET records: 0
+
+[15:32:51.314] PROCESSING ADDON HANDLERS ...
+[15:32:51.315] No handlers to process.
+
+[15:32:51.316] Ready to process the data.
+
+[15:32:51.318] DELETING OLD DATA FROM THE TARGET ...
+[15:32:51.318] {PSR_Milestone__c} No records to delete.
+[15:32:51.319] {Operations_Relationship__c} No records to delete.
+[15:32:51.320] {AI_Related_Account__c} No records to delete.
+[15:32:51.321] {PSR_Sub_Operation__c} No records to delete.
+[15:32:51.321] {PSR_Project_Status_Report__c} No records to delete.
+[15:32:51.322] {Operation__c} No records to delete.
+[15:32:51.323] {Opportunity} No records to delete.
+[15:32:51.323] {AccountContactRelation} No records to delete.
+[15:32:51.324] {Contact} No records to delete.
+[15:32:51.325] {Account} No records to delete.
+[15:32:51.326] {Fund__c} No records to delete.
+[15:32:51.326] {PSR_Category__c} No records to delete.
+[15:32:51.327] {PSR_Milestone_Execution__c} No records to delete.
+[15:32:51.327] {PSR_Transaction__c} No records to delete.
+[15:32:51.328] {PSR_Clause__c} No records to delete.
+[15:32:51.329] {Campaign} No records to delete.
+[15:32:51.329] {Pricebook2} No records to delete.
+[15:32:51.330] {Quote} No records to delete.
+[15:32:51.331] {Contract} No records to delete.
+[15:32:51.331] {Pitch__c} No records to delete.
+[15:32:51.332] {Individual} No records to delete.
+[15:32:51.333] {RecordType} No records to delete.
+[15:32:51.333] Deleting data was skipped.
+
+[15:32:51.335] RETRIEVING THE DATA STEP 1 ...
+[15:32:51.336] {RecordType} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[15:32:51.337] {RecordType} Query string: SELECT Id, DeveloperName, Name, Description, IsActive, SobjectType, $$DeveloperName$NamespacePrefix$SobjectType  FROM  RecordType.
+[15:32:51.447] {RecordType} Retrieving the SOURCE data has been completed. Fetched 65 new records.
+[15:32:51.451] {Account} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[15:32:51.452] {Account} Query string: SELECT Id, Name, IsPersonAccount, LastName, FirstName, Salutation, MiddleName, Suffix, Type, ParentId, BillingStreet, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingStateCode, BillingCountryCode, BillingLatitude, BillingLongitud... FROM  Account.

@@ -1,0 +1,43 @@
+AI_Account__c,AI_Opportunity__c,AI_Main__c,AI_Role__c,AI_Unique_Id__c,Errors
+0012200000VBjayAAD,,true,,0062g000005aYxzAAE-0011I00000cinJFQAY,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2AZ
+0012200000VBjaxAAD,,true,,0062g000005aivZAAQ-0011I00000cinGkQAI,
+0012200000VBjgSAAT,,true,,0062g000005ajExAAI-0011I00000cinLdQAI,
+0012200000VBjgSAAT,00622000005FEJ8AAO,true,,0062g000005aadVAAQ-0011I00000cinLdQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Aa
+0012200000VBjaxAAD,,true,,0062g000005aR0qAAE-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ab
+0012200000VBjgVAAT,,true,,0062g000005ZipeAAC-0011I00000cinLgQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ac
+0012200000VBjgVAAT,,true,,0062g000005Zd35AAC-0011I00000cinLgQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ad
+0012200000VBjaxAAD,,true,,0062g000005Zj2YAAS-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ae
+0012200000VBjaxAAD,,false,Executing Agency,0062g000005ZizjAAC-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Af
+0012200000VBjaxAAD,,true,,0062g000005ZquyAAC-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ag
+0012200000VBjaxAAD,00622000005FEIxAAO,true,,0062g000005ZyhjAAC-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ah
+0012200000VBjaxAAD,00622000005FEJ0AAO,true,,0062g000005aR0bAAE-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ai
+0012200000VBjaxAAD,,true,,0062g000005aUSAAA2-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Aj
+0012200000VBjaxAAD,,true,,0062g000005aUSeAAM-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ak
+0012200000VBjayAAD,,true,,0062g000005aWskAAE-0011I00000cinJFQAY,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Al
+0012200000VBjaxAAD,,true,,0062g000005aTXgAAM-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Am
+0012200000VBjazAAD,00622000005FEJ5AAO,true,,0062g000005aW3qAAE-0011I00000cinJGQAY,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2An
+0012200000VBjaxAAD,00622000005FEJ6AAO,true,,0062g000005aWnxAAE-0011I00000cinGkQAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ao
+,00622000005FEJAAA4,true,,0062g000005ajyZAAQ-0011I00000cinNPQAY,
+,00622000005FEJ3AAO,true,,0062g000005aTh8AAE-0011I00000cinNPQAY,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ap
+,,false,Borrower,0063s00000ES46hAAD-0011I00000k9mIYQAY,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Aq
+0012200000VBjrFAAT,,true,,0062g000005ZizjAAC-0011I00000mjXizQAE,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ar
+0012200000VBkpoAAD,00622000005FEIzAAO,true,,0062g000005aODJAA2-0011I000016fH3FQAU,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2As
+0012200000VBlORAA1,00622000005FEIwAAO,true,,0062g000005ZsuQAAS-0011I00001CJ0J3QAL,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2At
+0012200000VBlORAA1,,true,,0062g000005ZmYsAAK-0011I00001CJ0J3QAL,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Au
+0012200000VBlORAA1,,true,,0062g000005aR0vAAE-0011I00001CJ0J3QAL,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Av
+0012200000VBlORAA1,00622000005FEJ2AAO,true,,0062g000005aR0mAAE-0011I00001CJ0J3QAL,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Aw
+0012200000VBlPzAAL,,true,,0062g000005Zd2qAAC-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ax
+0012200000VBlPzAAL,,true,,0062g000005Zd2HAAS-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Ay
+0012200000VBlPzAAL,,true,,0062g000005Zd3eAAC-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2Az
+0012200000VBlPzAAL,00622000005FEIuAAO,true,,0062g000005ZivDAAS-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B0
+0012200000VBlPzAAL,,true,,0062g000005ZmKpAAK-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B1
+0012200000VBlPzAAL,00622000005FEIyAAO,true,,0062g000005aBnrAAE-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B2
+0012200000VBlPzAAL,00622000005FEIvAAO,true,,0062g000005ZmX3AAK-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B3
+0012200000VBlPzAAL,,true,,0062g000005aR15AAE-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B4
+0012200000VBlPzAAL,00622000005FEJ1AAO,true,,0062g000005aR0lAAE-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B5
+0012200000VBlPzAAL,00622000005FEJ4AAO,true,,0062g000005aUSFAA2-0011I00001DY02lQAD,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B6
+0012200000VBlVzAAL,,true,,0062g000005aWAcAAM-0013s00000wKrm9AAC,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B7
+,,true,,0062g000005Ziq8AAC-0013s00000zfjZ1AAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B8
+,00622000005FEItAAO,true,,0062g000005ZiqXAAS-0013s00000zfjZ1AAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2B9
+,00622000005FEJ7AAO,true,,0062g000005aWvoAAE-0013s00000zfjZ1AAI,duplicate value found: AI_Unique_Id__c duplicates value on record with id: a2222000000B2BA
+0012200000VBmFgAAL,00622000005FEJ9AAO,true,,0062g000005ajEiAAI-0013s000010H3b3AAC,

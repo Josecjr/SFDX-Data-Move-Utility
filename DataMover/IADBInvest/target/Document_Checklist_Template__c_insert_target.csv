@@ -1,0 +1,27 @@
+Phase__c,Product_Family_Asset_Class__c,Product_Type__c,Product__c,Sector__c,Segment__c,Status__c,Template_Name__c,Errors
+Structuring,Loan,Loan,Loan,Funds,Financial Institutions,Published,Analysis & Structuring  - Funds,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Energy,Infrastructure,Published,Analysis & Structuring  - Energy,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Transport,Infrastructure,Published,Analysis & Structuring  - Transport,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Social Infrastructure,Infrastructure,Published,Analysis & Structuring  - Social Infrastructure,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Water and Sanitation,Infrastructure,Published,Analysis & Structuring  - Water and Sanitation,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Banks,Financial Institutions,Published,Initial Review - Banks,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Non-Banks FIs,Financial Institutions,Published,Analysis & Structuring  - Non-Banks Fis,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Non-Banks FIs,Financial Institutions,Published,Initial Review - Non-Banks FIs,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Funds,Financial Institutions,Published,Initial Review - Funds,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Agribusiness,Corporates,Published,Initial Review - Agribusiness,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Manufacturing,Corporates,Published,Initial Review - Manufacturing,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,TMT,Corporates,Published,Initial Review - TMT,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Tourism,Corporates,Published,Initial Review - Tourism,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Agribusiness,Corporates,Published,Analysis & Structuring  - Agribusiness - Legal DD Checklist,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Tourism,Corporates,Published,Analysis & Structuring  - Tourism - Legal DD Checklist,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Agribusiness,Corporates,Published,Analysis & Structuring  - Agribusiness,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Manufacturing,Corporates,Published,Analysis & Structuring  - Manufacturing,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,TMT,Corporates,Published,Analysis & Structuring  - TMT,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Tourism,Corporates,Published,Analysis & Structuring  - Tourism,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Banks,Financial Institutions,Published,Analysis & Structuring  - Banks,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Energy,Infrastructure,Published,Initial Review - Energy,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Transport,Infrastructure,Published,Initial Review - Transport,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Social Infrastructure,Infrastructure,Published,Initial Review - Social Infrastructure,Status Cannot Be Published On Creation
+Initial Review,Loan,Loan,Loan,Water and Sanitation,Infrastructure,Published,Initial Review - Water and Sanitation,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,Manufacturing,Corporates,Published,Analysis & Structuring  - Manufacturing - Legal DD Checklist,Status Cannot Be Published On Creation
+Structuring,Loan,Loan,Loan,TMT,Corporates,Published,Analysis & Structuring  - TMT - Legal DD Checklist,Status Cannot Be Published On Creation

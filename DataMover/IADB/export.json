@@ -1,0 +1,68 @@
+{
+ "promptOnMissingParentObjects": false,
+  "objects": [
+  {
+      "query": "SELECT Id, DeveloperName, Name, Description, IsActive, SobjectType FROM RecordType",
+      "operation": "Upsert",
+      "externalId" : "DeveloperName;NamespacePrefix;SobjectType"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Contact where accountid != ''",
+      "operation": "Upsert",
+     "externalId": "FirstName;LastName;Email;AccountId",
+	"useValuesMapping": true,
+      "master": false
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Account",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM AccountContactRelation",
+      "operation": "Upsert",
+      "externalId": "AccountId;ContactId",
+       "master": false
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Operation__c",
+      "operation": "Upsert",
+      "externalId": "Operation_ID__c"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Opportunity",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM PSR_Sub_Operation__c ",
+      "operation": "Upsert",
+      "externalId": "PSR_Sub_Operation_ID__c"
+    },
+	{
+      "query": "SELECT createable_true, updateable_true FROM AI_Related_Account__c ",
+      "operation": "Upsert",
+      "externalId": "AI_Account__c;AI_Opportunity__c",
+      "master": false
+    },
+		{
+      "query": "SELECT createable_true, updateable_true FROM Operations_Relationship__c ",
+      "operation": "Upsert",
+      "externalId": "Client__c;Operation__c",
+      "master": false
+    },
+		{
+      "query": "SELECT createable_true, updateable_true FROM PSR_Milestone__c",
+      "operation": "Upsert",
+      "externalId": "PSR_Milestone_ID__c"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM PSR_Project_Status_Report__c",
+      "operation": "Upsert",
+      "externalId": "PSR_Suboperation__c"
+    }
+	
+	
+	
+  ]
+}

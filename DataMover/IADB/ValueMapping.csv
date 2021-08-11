@@ -1,0 +1,2 @@
+ObjectName,FieldName,RawValue,Value
+Contact,Email,/(.+)/,$1.REPLACE

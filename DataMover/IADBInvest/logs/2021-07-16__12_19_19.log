@@ -1,0 +1,373 @@
+
+[12:19:19.710] {"Running version":"4.4.2"}
+
+[12:19:19.713] [[Core Manifest]] Loading addon manifest ...
+[12:19:19.714] [[User Manifest]] Loading addon manifest ...
+[12:19:19.908] Connecting to joseda@iadb.org.idbinvestprod using SFDX CLI ...
+[12:19:23.344] Successfully connected to joseda@iadb.org.idbinvestprod.
+[12:19:24.402] Connecting to joseda@iadb.org.idbinvestprod.codemerge using SFDX CLI ...
+[12:19:26.591] Successfully connected to joseda@iadb.org.idbinvestprod.codemerge.
+[12:19:26.885] {"SOURCE":"joseda@iadb.org.idbinvestprod.","TARGET":"joseda@iadb.org.idbinvestprod.codemerge.","Package script":"C:\\Users\\joseda\\OneDrive - Inter-American Development Bank Group\\Desktop\\DataMover\\IADBInvest\\export.json."}
+
+[12:19:26.895] GETTING AND ANALYSING OBJECTS METADATA ...
+[12:19:26.896] Processing the sObject RecordType ...
+[12:19:26.899] Getting metadata for RecordType (SOURCE)
+[12:19:27.389] Getting metadata for RecordType (TARGET)
+[12:19:28.659] Processing the sObject Account ...
+[12:19:28.661] Getting metadata for Account (SOURCE)
+[12:19:29.623] Getting metadata for Account (TARGET)
+[12:19:29.923] Processing the sObject Contact ...
+[12:19:29.924] Getting metadata for Contact (SOURCE)
+[12:19:31.143] Getting metadata for Contact (TARGET)
+[12:19:31.465] Processing the sObject AccountContactRelation ...
+[12:19:31.466] Getting metadata for AccountContactRelation (SOURCE)
+[12:19:31.845] Getting metadata for AccountContactRelation (TARGET)
+[12:19:31.945] Processing the sObject Opportunity ...
+[12:19:31.946] Getting metadata for Opportunity (SOURCE)
+[12:19:32.577] Getting metadata for Opportunity (TARGET)
+[12:19:32.798] Processing the sObject IDB_Client_Opportunity_Team_Member__c ...
+[12:19:32.799] Getting metadata for IDB_Client_Opportunity_Team_Member__c (SOURCE)
+[12:19:33.173] Getting metadata for IDB_Client_Opportunity_Team_Member__c (TARGET)
+[12:19:33.309] Processing the sObject Comment__c ...
+[12:19:33.310] Getting metadata for Comment__c (SOURCE)
+[12:19:33.613] Getting metadata for Comment__c (TARGET)
+[12:19:33.741] Processing the sObject Document_Checklist_Template__c ...
+[12:19:33.742] Getting metadata for Document_Checklist_Template__c (SOURCE)
+[12:19:34.171] Getting metadata for Document_Checklist_Template__c (TARGET)
+[12:19:34.325] Processing the sObject Document_Checklist_Item__c ...
+[12:19:34.326] Getting metadata for Document_Checklist_Item__c (SOURCE)
+[12:19:35.35] Getting metadata for Document_Checklist_Item__c (TARGET)
+[12:19:35.229] Processing the sObject IDB_Integrity_Due_Diligence_Form__c ...
+[12:19:35.231] Getting metadata for IDB_Integrity_Due_Diligence_Form__c (SOURCE)
+[12:19:35.779] Getting metadata for IDB_Integrity_Due_Diligence_Form__c (TARGET)
+[12:19:36.48] Processing the sObject IDB_Integrity_Due_Diligence_Form_Fund__c ...
+[12:19:36.49] Getting metadata for IDB_Integrity_Due_Diligence_Form_Fund__c (SOURCE)
+[12:19:36.570] Getting metadata for IDB_Integrity_Due_Diligence_Form_Fund__c (TARGET)
+[12:19:36.713] Processing the sObject IDB_Integrity_Due_Diligence_Form_Fund__c ...
+[12:19:36.714] Processing the sObject IDB_Integrity_Due_Diligence_Form__c ...
+[12:19:36.715] Processing the sObject Document_Checklist_Item__c ...
+[12:19:36.718] Getting metadata for Survey (SOURCE)
+[12:19:37.27] Getting metadata for Survey (TARGET)
+[12:19:37.142] The parent sobject Survey for the lookup field Document_Checklist_Item__c.IDB_Survey__c has been included into the process. The externalId is set to 'Name'.
+[12:19:37.144] Processing the sObject Document_Checklist_Template__c ...
+[12:19:37.144] Processing the sObject Comment__c ...
+[12:19:37.145] Processing the sObject IDB_Client_Opportunity_Team_Member__c ...
+[12:19:37.146] Processing the sObject Opportunity ...
+[12:19:37.155][WARN] Failed to resolve external Id 'Organization_Ext_Id__c,RecordTypeId' for the parent sobject Account. Child lookup field: Opportunity.AccountId.
+[12:19:37.157] Getting metadata for Campaign (SOURCE)
+[12:19:37.647] Getting metadata for Campaign (TARGET)
+[12:19:37.833] The parent sobject Campaign for the lookup field Opportunity.CampaignId has been included into the process. The externalId is set to 'Name'.
+[12:19:37.836] Getting metadata for Pricebook2 (SOURCE)
+[12:19:38.100] Getting metadata for Pricebook2 (TARGET)
+[12:19:38.179] The parent sobject Pricebook2 for the lookup field Opportunity.Pricebook2Id has been included into the process. The externalId is set to 'Name'.
+[12:19:38.182] Getting metadata for Quote (SOURCE)
+[12:19:38.699] Getting metadata for Quote (TARGET)
+[12:19:38.873] The parent sobject Quote for the lookup field Opportunity.SyncedQuoteId has been included into the process. The externalId is set to 'Name'.
+[12:19:38.875] Getting metadata for Contract (SOURCE)
+[12:19:39.503] Getting metadata for Contract (TARGET)
+[12:19:39.690] The parent sobject Contract for the lookup field Opportunity.ContractId has been included into the process. The externalId is set to 'ContractNumber'.
+[12:19:39.693] Getting metadata for FinServ__FinancialAccount__c (SOURCE)
+[12:19:40.495] Getting metadata for FinServ__FinancialAccount__c (TARGET)
+[12:19:40.724] The parent sobject FinServ__FinancialAccount__c for the lookup field Opportunity.FinServ__FinancialAccount__c has been included into the process. The externalId is set to 'Name'.
+[12:19:40.726][WARN] Failed to resolve external Id 'Organization_Ext_Id__c,RecordTypeId' for the parent sobject Account. Child lookup field: Opportunity.FinServ__Household__c.
+[12:19:40.728] Processing the sObject AccountContactRelation ...
+[12:19:40.729] Processing the sObject Contact ...
+[12:19:40.731][WARN] Failed to resolve external Id 'Organization_Ext_Id__c,RecordTypeId' for the parent sobject Account. Child lookup field: Contact.AccountId.
+[12:19:40.734] Getting metadata for Individual (SOURCE)
+[12:19:41.99] Getting metadata for Individual (TARGET)
+[12:19:41.220] The parent sobject Individual for the lookup field Contact.IndividualId has been included into the process. The externalId is set to 'Name'.
+[12:19:41.224] Processing the sObject Account ...
+[12:19:41.226][WARN] Failed to resolve external Id 'Organization_Ext_Id__c,RecordTypeId' for the parent sobject Account. Child lookup field: Account.ParentId.
+[12:19:41.231] Processing the sObject RecordType ...
+
+[12:19:41.236] PREPARING DATA MIGRATION JOB ...
+[12:19:41.237] Building migration strategy ...
+[12:19:41.257] {"Order of objects to retrieve data":"RecordType; Contact; Account; AccountContactRelation; IDB_Client_Opportunity_Team_Member__c; Comment__c; Document_Checklist_Template__c; Document_Checklist_Item__c; IDB_Integrity_Due_Diligence_Form__c; IDB_Integrity_Due_Diligence_Form_Fund__c; Individual; FinServ__FinancialAccount__c; Contract; Quote; Pricebook2; Campaign; Survey; Opportunity"}
+[12:19:41.259] {"Order of objects to delete data":"IDB_Integrity_Due_Diligence_Form_Fund__c; IDB_Integrity_Due_Diligence_Form__c; Document_Checklist_Item__c; Document_Checklist_Template__c; Comment__c; IDB_Client_Opportunity_Team_Member__c; Opportunity; AccountContactRelation; Account; Contact; Survey; Campaign; Pricebook2; Quote; Contract; FinServ__FinancialAccount__c; Individual; RecordType"}
+[12:19:41.260] {"Order of objects to update data":"RecordType; Individual; FinServ__FinancialAccount__c; Contract; Quote; Pricebook2; Campaign; Survey; Contact; Account; AccountContactRelation; Opportunity; IDB_Client_Opportunity_Team_Member__c; Comment__c; Document_Checklist_Template__c; Document_Checklist_Item__c; IDB_Integrity_Due_Diligence_Form__c; IDB_Integrity_Due_Diligence_Form_Fund__c"}
+[12:19:41.262] Preparing has been finished.
+
+[12:19:41.264] GETTING THE TOTAL AMOUNT OF RECORDS LIMITED BY THE OBJECT'S SOQL QUERY ...
+[12:19:41.543] {RecordType} Total amount of the SOURCE records: 67
+[12:19:41.588] {RecordType} Total amount of the TARGET records: 67
+[12:19:41.835] {Individual} Total amount of the SOURCE records: 0
+[12:19:41.948] {Individual} Total amount of the TARGET records: 0
+[12:19:42.172] {FinServ__FinancialAccount__c} Total amount of the SOURCE records: 0
+[12:19:42.221] {FinServ__FinancialAccount__c} Total amount of the TARGET records: 0
+[12:19:42.440] {Contract} Total amount of the SOURCE records: 0
+[12:19:42.484] {Contract} Total amount of the TARGET records: 0
+[12:19:42.727] {Quote} Total amount of the SOURCE records: 0
+[12:19:42.775] {Quote} Total amount of the TARGET records: 0
+[12:19:43.63] {Pricebook2} Total amount of the SOURCE records: 1
+[12:19:43.147] {Pricebook2} Total amount of the TARGET records: 1
+[12:19:43.367] {Campaign} Total amount of the SOURCE records: 3
+[12:19:43.439] {Campaign} Total amount of the TARGET records: 0
+[12:19:43.730] {Survey} Total amount of the SOURCE records: 2
+[12:19:43.792] {Survey} Total amount of the TARGET records: 2
+[12:19:44.18] {Contact} Total amount of the SOURCE records: 52
+[12:19:44.76] {Contact} Total amount of the TARGET records: 53
+[12:19:44.608] {Account} Total amount of the SOURCE records: 9
+[12:19:44.671] {Account} Total amount of the TARGET records: 9
+[12:19:44.913] {AccountContactRelation} Total amount of the SOURCE records: 51
+[12:19:44.955] {AccountContactRelation} Total amount of the TARGET records: 0
+[12:19:45.164] {Opportunity} Total amount of the SOURCE records: 5
+[12:19:45.219] {Opportunity} Total amount of the TARGET records: 5
+[12:19:45.450] {IDB_Client_Opportunity_Team_Member__c} Total amount of the SOURCE records: 0
+[12:19:45.503] {IDB_Client_Opportunity_Team_Member__c} Total amount of the TARGET records: 0
+[12:19:45.726] {Comment__c} Total amount of the SOURCE records: 0
+[12:19:45.773] {Comment__c} Total amount of the TARGET records: 0
+[12:19:46.15] {Document_Checklist_Template__c} Total amount of the SOURCE records: 26
+[12:19:46.62] {Document_Checklist_Template__c} Total amount of the TARGET records: 0
+[12:19:46.301] {Document_Checklist_Item__c} Total amount of the SOURCE records: 82
+[12:19:46.369] {Document_Checklist_Item__c} Total amount of the TARGET records: 90
+[12:19:46.630] {IDB_Integrity_Due_Diligence_Form__c} Total amount of the SOURCE records: 0
+[12:19:46.837] {IDB_Integrity_Due_Diligence_Form__c} Total amount of the TARGET records: 0
+[12:19:47.65] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total amount of the SOURCE records: 0
+[12:19:47.119] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total amount of the TARGET records: 0
+
+[12:19:47.122] PROCESSING ADDON HANDLERS ...
+[12:19:47.124] No handlers to process.
+
+[12:19:47.127] Ready to process the data.
+
+[12:19:47.131] DELETING OLD DATA FROM THE TARGET ...
+[12:19:47.133] {IDB_Integrity_Due_Diligence_Form_Fund__c} No records to delete.
+[12:19:47.134] {IDB_Integrity_Due_Diligence_Form__c} No records to delete.
+[12:19:47.136] {Document_Checklist_Item__c} No records to delete.
+[12:19:47.137] {Document_Checklist_Template__c} No records to delete.
+[12:19:47.139] {Comment__c} No records to delete.
+[12:19:47.140] {IDB_Client_Opportunity_Team_Member__c} No records to delete.
+[12:19:47.142] {Opportunity} No records to delete.
+[12:19:47.144] {AccountContactRelation} No records to delete.
+[12:19:47.145] {Account} No records to delete.
+[12:19:47.146] {Contact} No records to delete.
+[12:19:47.148] {Survey} No records to delete.
+[12:19:47.149] {Campaign} No records to delete.
+[12:19:47.150] {Pricebook2} No records to delete.
+[12:19:47.152] {Quote} No records to delete.
+[12:19:47.153] {Contract} No records to delete.
+[12:19:47.155] {FinServ__FinancialAccount__c} No records to delete.
+[12:19:47.156] {Individual} No records to delete.
+[12:19:47.158] {RecordType} No records to delete.
+[12:19:47.159] Deleting data was skipped.
+
+[12:19:47.163] RETRIEVING THE DATA STEP 1 ...
+[12:19:47.166] {RecordType} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:47.167] {RecordType} Query string: SELECT Id, DeveloperName, Name, Description, IsActive  FROM  RecordType.
+[12:19:47.555] {RecordType} Retrieving the SOURCE data has been completed. Fetched 67 new records.
+[12:19:47.557] {Contact} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:47.558] {Contact} Query string: SELECT Id, Name, AccountId, LastName, FirstName, Salutation, MiddleName, Suffix, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry, MailingLatitude, MailingLongitude, MailingGeocodeAccuracy, Phone, Fax, MobilePhone, ReportsT... FROM  Contact.
+[12:19:48.444] {Contact} Retrieving the SOURCE data has been completed. Fetched 52 new records.
+[12:19:48.450] {Account} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:48.451] {Account} Query string: SELECT Id, Name, Type, ParentId, BillingStreet, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingLatitude, BillingLongitude, BillingGeocodeAccuracy, ShippingStreet, ShippingCity, ShippingState, ShippingPostalCode, ShippingCountry,... FROM  Account.
+[12:19:48.881] {Account} Retrieving the SOURCE data has been completed. Fetched 9 new records.
+[12:19:48.882] {AccountContactRelation} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:48.883] {AccountContactRelation} Query string: SELECT Id, $$AccountId$ContactId, Roles, IsActive, StartDate, EndDate, Relationship_Strength__c, FinServ__IncludeInGroup__c, FinServ__PrimaryGroup__c, FinServ__Primary__c, FinServ__Rollups__c, FinServ__SourceSystemId__c  FROM  AccountContactRelation.
+[12:19:49.183] {AccountContactRelation} Retrieving the SOURCE data has been completed. Fetched 51 new records.
+[12:19:49.184] {IDB_Client_Opportunity_Team_Member__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:49.185] {IDB_Client_Opportunity_Team_Member__c} Query string: SELECT Id, Name, Opportunity_Team_Member_Record_Id__c, Team_Role__c  FROM  IDB_Client_Opportunity_Team_Member__c.
+[12:19:49.408] {IDB_Client_Opportunity_Team_Member__c} Retrieving the SOURCE data has been completed. Fetched 0 new records.
+[12:19:49.409] {Comment__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:49.410] {Comment__c} Query string: SELECT Id, Name, Comment__c  FROM  Comment__c.
+[12:19:49.651] {Comment__c} Retrieving the SOURCE data has been completed. Fetched 0 new records.
+[12:19:49.652] {Document_Checklist_Template__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:49.653] {Document_Checklist_Template__c} Query string: SELECT Id, Name, Phase__c, Product_Family_Asset_Class__c, Product_Type__c, Product__c, Sector__c, Segment__c, Status__c, Template_Name__c  FROM  Document_Checklist_Template__c.
+[12:19:53.728] {Document_Checklist_Template__c} Retrieving the SOURCE data has been completed. Fetched 26 new records.
+[12:19:53.730] {Document_Checklist_Item__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:53.731] {Document_Checklist_Item__c} Query string: SELECT Id, Name, Opportunity__c, ATI_Exception__c, Activity__c, Contains_PII__c, Description__c, Document_Type__c, EzShare_Document_Permalink__c, Function__c, IDB_ApprovalSubmitter_LastName__c, IDB_ApprovalSubmitter__c, IDB_EzShare_Number_Ext__c, IDB... FROM  Document_Checklist_Item__c.
+[12:19:54.460] {Document_Checklist_Item__c} Retrieving the SOURCE data has been completed. Fetched 82 new records.
+[12:19:54.463] {IDB_Integrity_Due_Diligence_Form__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:54.464] {IDB_Integrity_Due_Diligence_Form__c} Query string: SELECT Id, Name, IDB_First_Name__c, IDB_Gender__c, IDB_Group_or_Brand_Name__c, IDB_Last_Name__c, IDB_Legal_Name__c, IDB_Level__c, IDB_Middle_Name__c, IDB_Name__c, IDB_Percentage__c, IDB_Place_of_Incorporation__c, IDB_Role__c, IDB_Salutation__c, IDB_S... FROM  IDB_Integrity_Due_Diligence_Form__c.
+[12:19:54.687] {IDB_Integrity_Due_Diligence_Form__c} Retrieving the SOURCE data has been completed. Fetched 0 new records.
+[12:19:54.688] {IDB_Integrity_Due_Diligence_Form_Fund__c} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[12:19:54.689] {IDB_Integrity_Due_Diligence_Form_Fund__c} Query string: SELECT Id, Name, IDB_First_Name__c, IDB_Gender__c, IDB_Last_Name__c, IDB_Legal_Name__c, IDB_Level__c, IDB_Middle_Name__c, IDB_Name__c, IDB_Percentage__c, IDB_Place_of_Incorporation__c, IDB_Role__c, IDB_Salutation__c, IDB_Suffix__c, IDB_Title__c  FROM  IDB_Integrity_Due_Diligence_Form_Fund__c.
+[12:19:54.915] {IDB_Integrity_Due_Diligence_Form_Fund__c} Retrieving the SOURCE data has been completed. Fetched 0 new records.
+[12:19:54.920] Retrieving the data STEP 1 has been completed.
+
+[12:19:54.923] RETRIEVING THE DATA STEP 2 ...
+[12:19:54.924] PASS 1
+[12:19:54.925] =============
+[12:19:54.926] {Opportunity} Retrieving the SOURCE data from Org (STEP 2: filtered records) ...
+[12:19:54.927] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE AccountId IN ('0013h000016mZHGAA2', '0013h000016oXFoAAM', '0013h000016oXFeAAM', '0013h000015l6QpAAI', '0013h000015l6klAAA', '0013h00000tzEy2AAE', '0013h00000tzEzVAAU', '0013h00000xXCU8AAO', '0013h00000xXBsZAAW').
+[12:19:55.223] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE FinServ__Household__c IN ('0013h000016mZHGAA2', '0013h000016oXFoAAM', '0013h000016oXFeAAM', '0013h000015l6QpAAI', '0013h000015l6klAAA', '0013h00000tzEy2AAE', '0013h00000tzEzVAAU', '0013h00000xXCU8AAO', '0013h00000xXBsZAAW').
+[12:19:55.471] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE FinServ__ReferredByContact__c IN ('0033h00000i9aDGAAY', '0033h00000i9aDLAAY', '0033h00000kSPBUAA4', '0033h00000kSPCdAAO', '0033h00000l03OvAAI', '0033h00000kSSznAAG', '0033h00000l07BtAAI', '0033h00000l07FHAAY', '0033h00000l07ByAAI',....
+[12:19:55.735] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE Primary_Contact__c IN ('0033h00000i9aDGAAY', '0033h00000i9aDLAAY', '0033h00000kSPBUAA4', '0033h00000kSPCdAAO', '0033h00000l03OvAAI', '0033h00000kSSznAAG', '0033h00000l07BtAAI', '0033h00000l07FHAAY', '0033h00000l07ByAAI', '0033h0000....
+[12:19:56.40] {Opportunity} Retrieving the SOURCE data has been completed. Fetched 5 new records.
+
+[12:19:56.46] PASS 2
+[12:19:56.48] =============
+[12:19:56.50] No records
+
+[12:19:56.53] PASS 3
+[12:19:56.55] =============
+[12:19:56.57] {Survey} Retrieving the SOURCE data from Org (STEP 1: filtered records) ...
+[12:19:56.58] {Survey} Query string: SELECT Id, Name  FROM  Survey WHERE Id IN ('0Kd3h000000DdMSCA0').
+[12:19:56.307] {Survey} Retrieving the SOURCE data has been completed. Fetched 1 new records.
+[12:19:56.313] {Opportunity} Retrieving the SOURCE data from Org (STEP 1: filtered records) ...
+[12:19:56.315] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE Id IN ('0063h00000FhMuFAAV', '0063h00000Fh8xiAAB', '0063h00000FhqgOAAR', '0063h00000Dyq2NAAR', '0063h00000DvWbsAAF').
+[12:19:56.599] {Opportunity} Retrieving the SOURCE data has been completed. Fetched 0 new records.
+
+[12:19:56.601] PASS 4
+[12:19:56.602] =============
+[12:19:56.604] No records
+
+[12:19:56.606] TARGET
+[12:19:56.607] =============
+[12:19:56.608] {RecordType} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:56.609] {RecordType} Query string: SELECT Id, DeveloperName, Name, Description, IsActive  FROM  RecordType.
+[12:19:56.715] {RecordType} Retrieving the TARGET data has been completed. Fetched 67 new records.
+[12:19:56.717] {Contact} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:56.719] {Contact} Query string: SELECT Id, Name, AccountId, LastName, FirstName, Salutation, MiddleName, Suffix, MailingStreet, MailingCity, MailingState, MailingPostalCode, MailingCountry, MailingLatitude, MailingLongitude, MailingGeocodeAccuracy, Phone, Fax, MobilePhone, ReportsT... FROM  Contact.
+[12:19:56.903] {Contact} Retrieving the TARGET data has been completed. Fetched 53 new records.
+[12:19:56.905] {Account} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:56.906] {Account} Query string: SELECT Id, Name, Type, ParentId, BillingStreet, BillingCity, BillingState, BillingPostalCode, BillingCountry, BillingLatitude, BillingLongitude, BillingGeocodeAccuracy, ShippingStreet, ShippingCity, ShippingState, ShippingPostalCode, ShippingCountry,... FROM  Account.
+[12:19:57.45] {Account} Retrieving the TARGET data has been completed. Fetched 9 new records.
+[12:19:57.46] {AccountContactRelation} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.46] {AccountContactRelation} Query string: SELECT Id, $$AccountId$ContactId, Roles, IsActive, StartDate, EndDate, Relationship_Strength__c, FinServ__IncludeInGroup__c, FinServ__PrimaryGroup__c, FinServ__Primary__c, FinServ__Rollups__c, FinServ__SourceSystemId__c  FROM  AccountContactRelation.
+[12:19:57.96] {AccountContactRelation} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.97] {IDB_Client_Opportunity_Team_Member__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.98] {IDB_Client_Opportunity_Team_Member__c} Query string: SELECT Id, Name, Opportunity_Team_Member_Record_Id__c, Team_Role__c  FROM  IDB_Client_Opportunity_Team_Member__c.
+[12:19:57.171] {IDB_Client_Opportunity_Team_Member__c} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.175] {Comment__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.179] {Comment__c} Query string: SELECT Id, Name, Comment__c  FROM  Comment__c.
+[12:19:57.262] {Comment__c} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.263] {Document_Checklist_Template__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.264] {Document_Checklist_Template__c} Query string: SELECT Id, Name, Phase__c, Product_Family_Asset_Class__c, Product_Type__c, Product__c, Sector__c, Segment__c, Status__c, Template_Name__c  FROM  Document_Checklist_Template__c.
+[12:19:57.316] {Document_Checklist_Template__c} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.317] {Document_Checklist_Item__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.318] {Document_Checklist_Item__c} Query string: SELECT Id, Name, Opportunity__c, ATI_Exception__c, Activity__c, Contains_PII__c, Description__c, Document_Type__c, EzShare_Document_Permalink__c, Function__c, IDB_ApprovalSubmitter_LastName__c, IDB_ApprovalSubmitter__c, IDB_EzShare_Number_Ext__c, IDB... FROM  Document_Checklist_Item__c.
+[12:19:57.462] {Document_Checklist_Item__c} Retrieving the TARGET data has been completed. Fetched 90 new records.
+[12:19:57.463] {IDB_Integrity_Due_Diligence_Form__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.464] {IDB_Integrity_Due_Diligence_Form__c} Query string: SELECT Id, Name, IDB_First_Name__c, IDB_Gender__c, IDB_Group_or_Brand_Name__c, IDB_Last_Name__c, IDB_Legal_Name__c, IDB_Level__c, IDB_Middle_Name__c, IDB_Name__c, IDB_Percentage__c, IDB_Place_of_Incorporation__c, IDB_Role__c, IDB_Salutation__c, IDB_S... FROM  IDB_Integrity_Due_Diligence_Form__c.
+[12:19:57.538] {IDB_Integrity_Due_Diligence_Form__c} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.539] {IDB_Integrity_Due_Diligence_Form_Fund__c} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.540] {IDB_Integrity_Due_Diligence_Form_Fund__c} Query string: SELECT Id, Name, IDB_First_Name__c, IDB_Gender__c, IDB_Last_Name__c, IDB_Legal_Name__c, IDB_Level__c, IDB_Middle_Name__c, IDB_Name__c, IDB_Percentage__c, IDB_Place_of_Incorporation__c, IDB_Role__c, IDB_Salutation__c, IDB_Suffix__c, IDB_Title__c  FROM  IDB_Integrity_Due_Diligence_Form_Fund__c.
+[12:19:57.606] {IDB_Integrity_Due_Diligence_Form_Fund__c} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.607] {Contract} Retrieving the TARGET data from Org (STEP 2: all records) ...
+[12:19:57.608] {Contract} Query string: SELECT Id, ContractNumber  FROM  Contract.
+[12:19:57.687] {Contract} Retrieving the TARGET data has been completed. Fetched 0 new records.
+[12:19:57.688] {Survey} Retrieving the TARGET data from Org (STEP 2: filtered records) ...
+[12:19:57.688] {Survey} Query string: SELECT Id, Name  FROM  Survey WHERE Name IN ('Gender Risk Assessment Tool').
+[12:19:57.763] {Survey} Retrieving the TARGET data has been completed. Fetched 1 new records.
+[12:19:57.764] {Opportunity} Retrieving the TARGET data from Org (STEP 2: filtered records) ...
+[12:19:57.765] {Opportunity} Query string: SELECT Id, Name, AccountId, Description, StageName, Amount, Probability, CloseDate, Type, NextStep, LeadSource, ForecastCategoryName, CampaignId, Pricebook2Id, SyncedQuoteId, ContractId, Budget_Confirmed__c, Discovery_Completed__c, ROI_Analysis_Compl... FROM  Opportunity WHERE Name IN ('Grupo Pinero CV19 Facility', 'Sicredi - Green Bond', 'Promerica ES - Bond', 'TIA Trade Finance', 'Agripac LP').
+[12:19:57.872] {Opportunity} Retrieving the TARGET data has been completed. Fetched 5 new records.
+[12:19:57.873] Retrieving the data STEP 2 has been completed.
+
+[12:19:57.875] PROCESSING ADDON HANDLERS ...
+[12:19:57.876] No handlers to process.
+
+
+[12:19:57.877] DATA RETRIEVING SUMMARY
+[12:19:57.878] {RecordType} Total retrieved within all steps (source/target): 67/67 records.
+[12:19:57.879] {Contact} Total retrieved within all steps (source/target): 52/53 records.
+[12:19:57.880] {Account} Total retrieved within all steps (source/target): 9/9 records.
+[12:19:57.880] {AccountContactRelation} Total retrieved within all steps (source/target): 51/0 records.
+[12:19:57.881] {IDB_Client_Opportunity_Team_Member__c} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.882] {Comment__c} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.883] {Document_Checklist_Template__c} Total retrieved within all steps (source/target): 26/0 records.
+[12:19:57.883] {Document_Checklist_Item__c} Total retrieved within all steps (source/target): 82/90 records.
+[12:19:57.884] {IDB_Integrity_Due_Diligence_Form__c} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.885] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.886] {Individual} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.887] {FinServ__FinancialAccount__c} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.888] {Contract} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.888] {Quote} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.889] {Pricebook2} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.889] {Campaign} Total retrieved within all steps (source/target): 0/0 records.
+[12:19:57.890] {Survey} Total retrieved within all steps (source/target): 1/1 records.
+[12:19:57.891] {Opportunity} Total retrieved within all steps (source/target): 5/5 records.
+
+[12:19:57.892] UPDATING THE TARGET STEP 1 ...
+[12:19:57.894] {RecordType} Number of records to Insert: 16.
+[12:19:57.897] {RecordType} The Insert API operation has been started using REST API.
+[12:19:57.897] [Job# REST:Insert] {RecordType} The job has been created. Uploading data ...
+[12:19:57.971][WARN] [Batch# REST:Insert] {RecordType} Incompleted. 0 records succeeded, 16 records failed.
+[12:19:57.972] {RecordType} The Insert API operation has been finished.
+[12:19:57.975] {RecordType} [INFO] There are 51 skipped target updates, since no matching was found between the source and the target records by the given ExternalId key, or the data is the same.
+[12:19:57.976] {RecordType} Updating the Target has been completed. Processed 16 records.
+[12:19:57.980] {Contact} Number of records to Insert: 1.
+[12:19:57.981] {Contact} The Insert API operation has been started using REST API.
+[12:19:57.982] [Job# REST:Insert] {Contact} The job has been created. Uploading data ...
+[12:19:58.460] {Contact} The Insert API operation has been finished.
+[12:19:58.462] {Contact} Number of records to Update: 1.
+[12:19:58.464] {Contact} The Update API operation has been started using REST API.
+[12:19:58.465] [Job# REST:Update] {Contact} The job has been created. Uploading data ...
+[12:19:58.822][WARN] [Batch# REST:Update] {Contact} Incompleted. 0 records succeeded, 1 records failed.
+[12:19:58.823] {Contact} The Update API operation has been finished.
+[12:19:58.827] {Contact} [INFO] There are 50 skipped target updates, since no matching was found between the source and the target records by the given ExternalId key, or the data is the same.
+[12:19:58.828] {Contact} Updating the Target has been completed. Processed 2 records.
+[12:19:58.830] {Account} Number of records to Insert: 9.
+[12:19:58.831] {Account} The Insert API operation has been started using REST API.
+[12:19:58.832] [Job# REST:Insert] {Account} The job has been created. Uploading data ...
+[12:19:59.511][WARN] [Batch# REST:Insert] {Account} Incompleted. 0 records succeeded, 9 records failed.
+[12:19:59.512] {Account} The Insert API operation has been finished.
+[12:19:59.515] {Account} Updating the Target has been completed. Processed 9 records.
+[12:19:59.516] {AccountContactRelation} Number of records to Insert: 51.
+[12:19:59.517] {AccountContactRelation} The Insert API operation has been started using REST API.
+[12:19:59.518] [Job# REST:Insert] {AccountContactRelation} The job has been created. Uploading data ...
+[12:20:00.303][WARN] [Batch# REST:Insert] {AccountContactRelation} Incompleted. 0 records succeeded, 51 records failed.
+[12:20:00.305] {AccountContactRelation} The Insert API operation has been finished.
+[12:20:00.308] {AccountContactRelation} Updating the Target has been completed. Processed 51 records.
+[12:20:00.312][WARN] {Opportunity} 5 missing parent lookup records were found. See MissingParentRecordsReport.csv file for the details.
+[12:20:00.313] {Opportunity} Number of records to Update: 5.
+[12:20:00.315] {Opportunity} The Update API operation has been started using REST API.
+[12:20:00.317] [Job# REST:Update] {Opportunity} The job has been created. Uploading data ...
+[12:20:00.674] {Opportunity} The Update API operation has been finished.
+[12:20:00.677] {Opportunity} Updating the Target has been completed. Processed 5 records.
+[12:20:00.678] {Document_Checklist_Template__c} Number of records to Insert: 26.
+[12:20:00.680] {Document_Checklist_Template__c} The Insert API operation has been started using REST API.
+[12:20:00.682] [Job# REST:Insert] {Document_Checklist_Template__c} The job has been created. Uploading data ...
+[12:20:00.775][WARN] [Batch# REST:Insert] {Document_Checklist_Template__c} Incompleted. 0 records succeeded, 26 records failed.
+[12:20:00.776] {Document_Checklist_Template__c} The Insert API operation has been finished.
+[12:20:00.779] {Document_Checklist_Template__c} Updating the Target has been completed. Processed 26 records.
+[12:20:00.785] {Document_Checklist_Item__c} Number of records to Insert: 4.
+[12:20:00.786] {Document_Checklist_Item__c} The Insert API operation has been started using REST API.
+[12:20:00.787] [Job# REST:Insert] {Document_Checklist_Item__c} The job has been created. Uploading data ...
+[12:20:01.385] {Document_Checklist_Item__c} The Insert API operation has been finished.
+[12:20:01.387] {Document_Checklist_Item__c} Number of records to Update: 2.
+[12:20:01.389] {Document_Checklist_Item__c} The Update API operation has been started using REST API.
+[12:20:01.390] [Job# REST:Update] {Document_Checklist_Item__c} The job has been created. Uploading data ...
+[12:20:01.563] {Document_Checklist_Item__c} The Update API operation has been finished.
+[12:20:01.568] {Document_Checklist_Item__c} [INFO] There are 76 skipped target updates, since no matching was found between the source and the target records by the given ExternalId key, or the data is the same.
+[12:20:01.570] {Document_Checklist_Item__c} Updating the Target has been completed. Processed 6 records.
+[12:20:01.572] Updating the Target (STEP 1) has been completed. Total processed 115 records.
+
+[12:20:01.576] UPDATING THE TARGET STEP 2 ...
+[12:20:01.587][WARN] {Contact} 51 missing parent lookup records were found. See MissingParentRecordsReport.csv file for the details.
+[12:20:01.589] {Contact} [INFO] There are 50 skipped target updates, since no matching was found between the source and the target records by the given ExternalId key, or the data is the same.
+[12:20:01.595] Nothing was updated
+
+[12:20:01.601] PROCESSING ADDON HANDLERS ...
+[12:20:01.603] No handlers to process.
+
+
+[12:20:01.607] DATA PROCESSING SUMMARY
+[12:20:01.609] {RecordType} Total processed within all steps (Insert + Update): 16 records.
+[12:20:01.611] {Contact} Total processed within all steps (Insert + Update): 2 records.
+[12:20:01.613] {Account} Total processed within all steps (Insert + Update): 9 records.
+[12:20:01.615] {AccountContactRelation} Total processed within all steps (Insert + Update): 51 records.
+[12:20:01.616] {IDB_Client_Opportunity_Team_Member__c} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.618] {Comment__c} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.619] {Document_Checklist_Template__c} Total processed within all steps (Insert + Update): 26 records.
+[12:20:01.621] {Document_Checklist_Item__c} Total processed within all steps (Insert + Update): 6 records.
+[12:20:01.622] {IDB_Integrity_Due_Diligence_Form__c} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.624] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.625] {Individual} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.627] {FinServ__FinancialAccount__c} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.629] {Contract} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.630] {Quote} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.638] {Pricebook2} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.642] {Campaign} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.645] {Survey} Total processed within all steps (Insert + Update): 0 records.
+[12:20:01.646] {Opportunity} Total processed within all steps (Insert + Update): 5 records.
+
+[12:20:01.650] Writing to C:\Users\joseda\OneDrive - Inter-American Development Bank Group\Desktop\DataMover\IADBInvest\MissingParentRecordsReport.csv ...
+
+
+[12:20:01.665] PROCESSING ADDON HANDLERS ...
+[12:20:01.667] No handlers to process.
+
+[12:20:01.841] Command succeeded.
+[12:20:01.844] Execution of the command sfdmu:run has been finished. Exit code 0 (SUCCESS).
+[12:20:01.849] Total time elapsed: 00h 00m 42s 138ms .

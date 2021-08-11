@@ -1,0 +1,165 @@
+
+[11:51:42.354] {"Running version":"4.4.2"}
+
+[11:51:42.357] [[Core Manifest]] Loading addon manifest ...
+[11:51:42.358] [[User Manifest]] Loading addon manifest ...
+[11:51:42.548] Connecting to joseda@iadb.org.idbinvestprod using SFDX CLI ...
+[11:51:45.419] Successfully connected to joseda@iadb.org.idbinvestprod.
+[11:51:46.364] Connecting to joseda@iadb.org.idbinvestprod.codemerge using SFDX CLI ...
+[11:51:48.383] Successfully connected to joseda@iadb.org.idbinvestprod.codemerge.
+[11:51:48.695] {"SOURCE":"joseda@iadb.org.idbinvestprod.","TARGET":"joseda@iadb.org.idbinvestprod.codemerge.","Package script":"C:\\Users\\joseda\\OneDrive - Inter-American Development Bank Group\\Desktop\\DataMover\\IADBInvest\\export.json."}
+
+[11:51:48.698] GETTING AND ANALYSING OBJECTS METADATA ...
+[11:51:48.699] Processing the sObject RecordType ...
+[11:51:48.700] Getting metadata for RecordType (SOURCE)
+[11:51:49.299] Getting metadata for RecordType (TARGET)
+[11:51:49.438] Processing the sObject Account ...
+[11:51:49.439] Getting metadata for Account (SOURCE)
+[11:51:50.423] Getting metadata for Account (TARGET)
+[11:51:51.106] Processing the sObject Contact ...
+[11:51:51.106] Getting metadata for Contact (SOURCE)
+[11:51:52.240] Getting metadata for Contact (TARGET)
+[11:51:55.150] Processing the sObject AccountContactRelation ...
+[11:51:55.151] Getting metadata for AccountContactRelation (SOURCE)
+[11:51:55.494] Getting metadata for AccountContactRelation (TARGET)
+[11:51:55.612] Processing the sObject Opportunity ...
+[11:51:55.613] Getting metadata for Opportunity (SOURCE)
+[11:51:56.475] Getting metadata for Opportunity (TARGET)
+[11:51:56.655] Processing the sObject IDB_Client_Opportunity_Team_Member__c ...
+[11:51:56.657] Getting metadata for IDB_Client_Opportunity_Team_Member__c (SOURCE)
+[11:51:57.58] Getting metadata for IDB_Client_Opportunity_Team_Member__c (TARGET)
+[11:51:58.537] Processing the sObject Comment__c ...
+[11:51:58.539] Getting metadata for Comment__c (SOURCE)
+[11:51:58.876] Getting metadata for Comment__c (TARGET)
+[11:51:59.20] Processing the sObject Document_Checklist_Template__c ...
+[11:51:59.21] Getting metadata for Document_Checklist_Template__c (SOURCE)
+[11:51:59.565] Getting metadata for Document_Checklist_Template__c (TARGET)
+[11:51:59.695] Processing the sObject Document_Checklist_Item__c ...
+[11:51:59.696] Getting metadata for Document_Checklist_Item__c (SOURCE)
+[11:52:00.339] Getting metadata for Document_Checklist_Item__c (TARGET)
+[11:52:00.510] Processing the sObject IDB_Integrity_Due_Diligence_Form__c ...
+[11:52:00.512] Getting metadata for IDB_Integrity_Due_Diligence_Form__c (SOURCE)
+[11:52:01.32] Getting metadata for IDB_Integrity_Due_Diligence_Form__c (TARGET)
+[11:52:01.555] Processing the sObject IDB_Integrity_Due_Diligence_Form_Fund__c ...
+[11:52:01.556] Getting metadata for IDB_Integrity_Due_Diligence_Form_Fund__c (SOURCE)
+[11:52:02.161] Getting metadata for IDB_Integrity_Due_Diligence_Form_Fund__c (TARGET)
+[11:52:02.320] Processing the sObject IDB_Integrity_Due_Diligence_Form_Fund__c ...
+[11:52:02.324] Processing the sObject IDB_Integrity_Due_Diligence_Form__c ...
+[11:52:02.327] Processing the sObject Document_Checklist_Item__c ...
+[11:52:02.342] Getting metadata for Survey (SOURCE)
+[11:52:02.707] Getting metadata for Survey (TARGET)
+[11:52:03.146] The parent sobject Survey for the lookup field Document_Checklist_Item__c.IDB_Survey__c has been included into the process. The externalId is set to 'Name'.
+[11:52:03.149] Processing the sObject Document_Checklist_Template__c ...
+[11:52:03.152] Processing the sObject Comment__c ...
+[11:52:03.154] Processing the sObject IDB_Client_Opportunity_Team_Member__c ...
+[11:52:03.156] Processing the sObject Opportunity ...
+[11:52:03.159] Getting metadata for Campaign (SOURCE)
+[11:52:03.635] Getting metadata for Campaign (TARGET)
+[11:52:03.786] The parent sobject Campaign for the lookup field Opportunity.CampaignId has been included into the process. The externalId is set to 'Name'.
+[11:52:03.792] Getting metadata for Pricebook2 (SOURCE)
+[11:52:04.40] Getting metadata for Pricebook2 (TARGET)
+[11:52:04.107] The parent sobject Pricebook2 for the lookup field Opportunity.Pricebook2Id has been included into the process. The externalId is set to 'Name'.
+[11:52:04.109] Getting metadata for Quote (SOURCE)
+[11:52:04.784] Getting metadata for Quote (TARGET)
+[11:52:04.968] The parent sobject Quote for the lookup field Opportunity.SyncedQuoteId has been included into the process. The externalId is set to 'Name'.
+[11:52:04.969] Getting metadata for Contract (SOURCE)
+[11:52:05.502] Getting metadata for Contract (TARGET)
+[11:52:05.707] The parent sobject Contract for the lookup field Opportunity.ContractId has been included into the process. The externalId is set to 'ContractNumber'.
+[11:52:05.708] Getting metadata for FinServ__FinancialAccount__c (SOURCE)
+[11:52:06.546] Getting metadata for FinServ__FinancialAccount__c (TARGET)
+[11:52:06.749] The parent sobject FinServ__FinancialAccount__c for the lookup field Opportunity.FinServ__FinancialAccount__c has been included into the process. The externalId is set to 'Name'.
+[11:52:06.751] Processing the sObject AccountContactRelation ...
+[11:52:06.751] Processing the sObject Contact ...
+[11:52:06.753] Getting metadata for Individual (SOURCE)
+[11:52:07.500] Getting metadata for Individual (TARGET)
+[11:52:07.634] The parent sobject Individual for the lookup field Contact.IndividualId has been included into the process. The externalId is set to 'Name'.
+[11:52:07.643] Processing the sObject Account ...
+[11:52:07.652] Processing the sObject RecordType ...
+[11:52:07.655] Getting metadata for BusinessProcess (SOURCE)
+[11:52:07.922] Getting metadata for BusinessProcess (TARGET)
+[11:52:08.11] The parent sobject BusinessProcess for the lookup field RecordType.BusinessProcessId has been included into the process. The externalId is set to 'Name'.
+
+[11:52:08.14] PREPARING DATA MIGRATION JOB ...
+[11:52:08.14] Building migration strategy ...
+[11:52:08.26] {"Order of objects to retrieve data":"RecordType; Contact; Account; AccountContactRelation; IDB_Client_Opportunity_Team_Member__c; Comment__c; Document_Checklist_Template__c; Document_Checklist_Item__c; IDB_Integrity_Due_Diligence_Form__c; IDB_Integrity_Due_Diligence_Form_Fund__c; BusinessProcess; Individual; FinServ__FinancialAccount__c; Contract; Quote; Pricebook2; Campaign; Survey; Opportunity"}
+[11:52:08.26] {"Order of objects to delete data":"IDB_Integrity_Due_Diligence_Form_Fund__c; IDB_Integrity_Due_Diligence_Form__c; Document_Checklist_Item__c; Document_Checklist_Template__c; Comment__c; IDB_Client_Opportunity_Team_Member__c; Opportunity; AccountContactRelation; Account; Contact; Survey; Campaign; Pricebook2; Quote; Contract; FinServ__FinancialAccount__c; Individual; RecordType; BusinessProcess"}
+[11:52:08.27] {"Order of objects to update data":"BusinessProcess; RecordType; Individual; FinServ__FinancialAccount__c; Contract; Quote; Pricebook2; Campaign; Survey; Contact; Account; AccountContactRelation; Opportunity; IDB_Client_Opportunity_Team_Member__c; Comment__c; Document_Checklist_Template__c; Document_Checklist_Item__c; IDB_Integrity_Due_Diligence_Form__c; IDB_Integrity_Due_Diligence_Form_Fund__c"}
+[11:52:08.28] Preparing has been finished.
+
+[11:52:08.29] GETTING THE TOTAL AMOUNT OF RECORDS LIMITED BY THE OBJECT'S SOQL QUERY ...
+[11:52:08.253] {BusinessProcess} Total amount of the SOURCE records: 3
+[11:52:08.307] {BusinessProcess} Total amount of the TARGET records: 3
+[11:52:08.691] {RecordType} Total amount of the SOURCE records: 67
+[11:52:08.742] {RecordType} Total amount of the TARGET records: 67
+[11:52:09.90] {Individual} Total amount of the SOURCE records: 0
+[11:52:09.504] {Individual} Total amount of the TARGET records: 0
+[11:52:09.757] {FinServ__FinancialAccount__c} Total amount of the SOURCE records: 0
+[11:52:09.848] {FinServ__FinancialAccount__c} Total amount of the TARGET records: 0
+[11:52:10.107] {Contract} Total amount of the SOURCE records: 0
+[11:52:10.161] {Contract} Total amount of the TARGET records: 0
+[11:52:10.386] {Quote} Total amount of the SOURCE records: 0
+[11:52:10.437] {Quote} Total amount of the TARGET records: 0
+[11:52:10.686] {Pricebook2} Total amount of the SOURCE records: 1
+[11:52:10.764] {Pricebook2} Total amount of the TARGET records: 1
+[11:52:11.8] {Campaign} Total amount of the SOURCE records: 3
+[11:52:11.63] {Campaign} Total amount of the TARGET records: 0
+[11:52:11.291] {Survey} Total amount of the SOURCE records: 2
+[11:52:11.366] {Survey} Total amount of the TARGET records: 2
+[11:52:11.597] {Contact} Total amount of the SOURCE records: 52
+[11:52:12.48] {Contact} Total amount of the TARGET records: 0
+[11:52:12.395] {Account} Total amount of the SOURCE records: 9
+[11:52:12.455] {Account} Total amount of the TARGET records: 9
+[11:52:12.677] {AccountContactRelation} Total amount of the SOURCE records: 51
+[11:52:12.925] {AccountContactRelation} Total amount of the TARGET records: 0
+[11:52:13.142] {Opportunity} Total amount of the SOURCE records: 5
+[11:52:14.690] {Opportunity} Total amount of the TARGET records: 0
+[11:52:14.917] {IDB_Client_Opportunity_Team_Member__c} Total amount of the SOURCE records: 0
+[11:52:14.968] {IDB_Client_Opportunity_Team_Member__c} Total amount of the TARGET records: 0
+[11:52:15.229] {Comment__c} Total amount of the SOURCE records: 0
+[11:52:15.292] {Comment__c} Total amount of the TARGET records: 0
+[11:52:15.534] {Document_Checklist_Template__c} Total amount of the SOURCE records: 26
+[11:52:15.585] {Document_Checklist_Template__c} Total amount of the TARGET records: 0
+[11:52:15.918] {Document_Checklist_Item__c} Total amount of the SOURCE records: 80
+[11:52:15.980] {Document_Checklist_Item__c} Total amount of the TARGET records: 79
+[11:52:16.224] {IDB_Integrity_Due_Diligence_Form__c} Total amount of the SOURCE records: 0
+[11:52:16.281] {IDB_Integrity_Due_Diligence_Form__c} Total amount of the TARGET records: 0
+[11:52:16.515] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total amount of the SOURCE records: 0
+[11:52:16.569] {IDB_Integrity_Due_Diligence_Form_Fund__c} Total amount of the TARGET records: 0
+
+[11:52:16.571] PROCESSING ADDON HANDLERS ...
+[11:52:16.572] No handlers to process.
+
+[11:52:16.574] Ready to process the data.
+
+[11:52:16.575] DELETING OLD DATA FROM THE TARGET ...
+[11:52:16.576] {IDB_Integrity_Due_Diligence_Form_Fund__c} No records to delete.
+[11:52:16.576] {IDB_Integrity_Due_Diligence_Form__c} No records to delete.
+[11:52:16.577] {Document_Checklist_Item__c} No records to delete.
+[11:52:16.578] {Document_Checklist_Template__c} No records to delete.
+[11:52:16.578] {Comment__c} No records to delete.
+[11:52:16.579] {IDB_Client_Opportunity_Team_Member__c} No records to delete.
+[11:52:16.579] {Opportunity} No records to delete.
+[11:52:16.580] {AccountContactRelation} No records to delete.
+[11:52:16.580] {Account} No records to delete.
+[11:52:16.581] {Contact} No records to delete.
+[11:52:16.581] {Survey} No records to delete.
+[11:52:16.582] {Campaign} No records to delete.
+[11:52:16.582] {Pricebook2} No records to delete.
+[11:52:16.583] {Quote} No records to delete.
+[11:52:16.583] {Contract} No records to delete.
+[11:52:16.584] {FinServ__FinancialAccount__c} No records to delete.
+[11:52:16.584] {Individual} No records to delete.
+[11:52:16.585] {RecordType} No records to delete.
+[11:52:16.585] {BusinessProcess} No records to delete.
+[11:52:16.586] Deleting data was skipped.
+
+[11:52:16.587] RETRIEVING THE DATA STEP 1 ...
+[11:52:16.588] {RecordType} Retrieving the SOURCE data from Org (STEP 1: all records) ...
+[11:52:16.589] {RecordType} Query string: SELECT Id, DeveloperName, Name, Description, BusinessProcessId, IsActive, BusinessProcess.Name  FROM  RecordType.
+[11:52:16.830][ERROR] Error during execution of the command: 
+ BusinessProcessId, IsActive, BusinessProcess.Name FROM RecordType
+                              ^
+ERROR at Row:1:Column:75
+Didn't understand relationship 'BusinessProcess' in field path. If you are attempting to use a custom relationship, be sure to append the '__r' after the custom relationship name. Please reference your WSDL or the describe call for the appropriate names..
+[11:52:16.831] Execution of the command sfdmu:run has been finished. Exit code 4 (COMMAND_EXECUTION_ERROR).
+[11:52:16.832] Total time elapsed: 00h 00m 34s 474ms .

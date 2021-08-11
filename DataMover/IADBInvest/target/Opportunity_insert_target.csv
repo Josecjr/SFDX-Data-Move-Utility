@@ -1,0 +1,6 @@
+Name,AccountId,Description,StageName,Amount,Probability,CloseDate,Type,NextStep,LeadSource,ForecastCategoryName,CampaignId,Pricebook2Id,SyncedQuoteId,ContractId,Budget_Confirmed__c,Discovery_Completed__c,ROI_Analysis_Completed__c,FinServ__FinancialAccount__c,Loss_Reason__c,FinServ__Household__c,FinServ__ReferredByContact__c,Country_Code__c,Primary_Contact__c,Site_Url__c,Transaction_Countries__c,Transaction_Number_Ext_Id__c,Errors,Id
+Grupo Pinero CV19 Facility,,,Analysis & Structuring,,75,2021-05-13,,,,Pipeline,,,,,false,false,false,,,,,DR,0030500000GTGvdAAH,13659-01,Dominican Republic;Jamaica;Mexico,13659-01,,00605000004hxHGAAY
+Sicredi - Green Bond,,,Analysis & Structuring,,75,2019-10-23,,,,Pipeline,,,,,false,false,false,,,,,BR,0030500000GTGw0AAH,11488-04,Brazil,11488-04,,00605000004hxHHAAY
+Promerica ES - Bond,,,Analysis & Structuring,,75,2021-04-27,,,,Pipeline,,,,,false,false,false,,,,,ES,0030500000GTGwFAAX,11861-03,El Salvador,11861-03,,00605000004hxHIAAY
+TIA Trade Finance,,,Analysis & Structuring,,75,2021-01-28,,,,Pipeline,,,,,false,false,false,,,,,EC,0030500000GTGviAAH,12789-02,Ecuador,12789-02,,00605000004hxHJAAY
+Agripac LP,,,Analysis & Structuring,,75,2021-06-04,,,,Pipeline,,,,,false,false,false,,,,,EC,0030500000GTGvbAAH,12493-02,Ecuador,12493-02,,00605000004hxHKAAY

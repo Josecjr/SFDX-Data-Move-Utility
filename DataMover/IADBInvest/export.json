@@ -1,0 +1,66 @@
+{
+ "promptOnMissingParentObjects": false,
+  "objects": [
+  {
+      "query": "SELECT Id, DeveloperName, Name, Description, IsActive, SobjectType FROM RecordType",
+      "operation": "Upsert",
+      "externalId" : "DeveloperName;NamespacePrefix;SobjectType"
+    },
+	 {
+      "query": "SELECT RecordTypeId,createable_true, updateable_true FROM Account",
+      "operation": "Upsert",
+      "externalId": "Organization_Ext_Id__c;RecordTypeId"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Contact",
+      "operation": "Upsert",
+	"useValuesMapping": true,
+      "externalId": "FirstName;LastName;Email;AccountId"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM AccountContactRelation",
+      "operation": "Upsert",
+      "externalId": "AccountId;ContactId",
+       "master": false
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Opportunity",
+      "operation": "Upsert",
+      "externalId": "",
+      "master": false
+    },
+   
+    {
+      "query": "SELECT createable_true, updateable_true FROM IDB_Client_Opportunity_Team_Member__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "master": false
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Comment__c",
+      "operation": "Upsert",
+      "externalId": "Name",
+      "master": false
+    },
+   {
+      "query": "SELECT createable_true, updateable_true FROM Document_Checklist_Template__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+    {
+      "query": "SELECT createable_true, updateable_true FROM Document_Checklist_Item__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+   {
+      "query": "SELECT createable_true, updateable_true FROM IDB_Integrity_Due_Diligence_Form__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    },
+   {
+      "query": "SELECT createable_true, updateable_true FROM IDB_Integrity_Due_Diligence_Form_Fund__c",
+      "operation": "Upsert",
+      "externalId": "Name"
+    }
+  ]
+}
